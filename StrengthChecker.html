@@ -1,0 +1,90 @@
+<html style="width:300px;">
+
+<head>
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/homepage.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<style>
+		#AppBody {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+		}
+
+		#contact {
+			max-width: 400px;
+			width: 100%;
+			padding: 20px;
+			background-color: #fff;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+			text-align: center;
+		}
+
+		.material-icons a {
+			color: #333;
+			text-decoration: none;
+		}
+
+		h3 {
+			margin-top: 20px;
+			font-size: 24px;
+			font-weight: 500;
+		}
+
+		h4 {
+			margin-top: 10px;
+			font-size: 18px;
+			font-weight: 400;
+			color: #777;
+		}
+
+		fieldset {
+			border: none;
+			margin: 20px 0;
+			padding: 0;
+		}
+
+		input[type="password"] {
+			width: 100%;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			font-size: 16px;
+		}
+
+		meter {
+			width: 100%;
+			height: 10px;
+			margin-top: 10px;
+		}
+
+		p#password-strength-text {
+			margin-top: 10px;
+			font-size: 14px;
+			color: #777;
+		}
+	</style>
+</head>
+
+<body id="AppBody">
+	<form id="contact" action="" method="post">
+		<i class="material-icons"><a href="homepage.html">home</a></i>
+		<h3>UTM PM</h3>
+		<h4>Password Strength Checker</h4>
+
+		<fieldset>
+			<input id="CheckPassword" placeholder="Enter Password Here" type="password" tabindex="1" required autofocus>
+		</fieldset>
+		<meter max="5" id="password-strength-meter"></meter>
+		<p id="password-strength-text"></p>
+	</form>
+</body>
+
+<script type="text/javascript" src="assets/js/StrengthChecker.js"></script>
+<script type="text/javascript" src="assets/js/zxcvbn.js"></script>
+
+</html>
